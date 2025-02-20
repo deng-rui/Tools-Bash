@@ -63,12 +63,12 @@ get_url_key() {
     PUB_KEY=$(curl -fsSL ${KEY_URL})
 }
 
-get_loacl_key() {
+get_local_key() {
     if [ "${KEY_PATH}" == '' ]; then
         read -e -p "Please enter the path:" KEY_PATH
         [ "${KEY_PATH}" == '' ] && echo -e "${ERROR} Invalid input." && exit 1
     fi
-    echo -e "${INFO} Get key from $(${KEY_PATH})..."
+    echo -e "${INFO} Get key from ${KEY_PATH}..."
     PUB_KEY=$(cat ${KEY_PATH})
 }
 
@@ -198,7 +198,7 @@ while getopts "og:u:f:p:d" OPT; do
         ;;
     f)
         KEY_PATH=$OPTARG
-        get_loacl_key
+        get_local_key
         install_key
         ;;
     p)
