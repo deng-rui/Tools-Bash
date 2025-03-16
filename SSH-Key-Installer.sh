@@ -7,6 +7,8 @@
 # Modify: Dr
 # Blog: https://p3terx.com
 #=============================================================
+# eg.
+# bash <(curl -fsSL https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) -o -d -g
 
 VERSION=2.7
 RED_FONT_PREFIX="\033[31m"
@@ -21,7 +23,7 @@ USAGE() {
 SSH Key Installer $VERSION
 
 Usage:
-  bash <(curl -fsSL git.io/key.sh) [options...] <arg>
+  bash <(curl -fsSL https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) [options...] <arg>
 
 Options:
   -o	Overwrite mode, this option is valid at the top
