@@ -14,9 +14,9 @@ while getopts "bjx" opt; do
   esac
 done
 
-echo "执行默认安装：wget, curl, screen, unzip"
+echo "执行默认安装：wget, curl, screen, unzip, ca-certificates"
 sudo apt update
-sudo apt install wget curl screen unzip -y
+sudo apt install wget curl screen unzip ca-certificates -y
 sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
@@ -32,7 +32,7 @@ fi
 
 if [ $INSTALL_JAVA -eq 1 ]; then
   echo "Install Zulu 24 JDK"
-  sudo apt install gnupg ca-certificates curl -y  # 确保 curl 可用
+  sudo apt install gnupg -y
   curl -s https://repos.azul.com/azul-repo.key | sudo gpg --dearmor -o /usr/share/keyrings/azul.gpg
   echo "deb [signed-by=/usr/share/keyrings/azul.gpg] https://repos.azul.com/zulu/deb stable main" | sudo tee /etc/apt/sources.list.d/zulu.list
   sudo apt update
