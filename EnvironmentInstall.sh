@@ -50,7 +50,7 @@ fi
 
 if grep -q "^PasswordAuthentication yes" /etc/ssh/sshd_config; then  # 检查 SSH 配置
   echo "检测到已启用密码登陆，正在执行 SSH 密钥安装脚本..."
-  bash <(curl -fsSL https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) -o -d -g $USER
+  bash <(curl -fsSL https://ghfast.top/https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) -o -d -g $USER
 else
   echo "密码登陆未启用，跳过 SSH 密钥安装"
 fi
