@@ -42,8 +42,9 @@ fi
 
 if [ $INSTALL_XANMOD -eq 1 ]; then
   echo "Install Xanmod LTS Kernel"
-  sudo add-apt-repository ppa:xanmod/xanmod -y  # 添加 Xanmod 仓库
-  sudo apt update
+  sudo apt install gnupg
+  wget -qO - https://dl.xanmod.org/archive.key | sudo gpg --dearmor -vo /etc/apt/keyrings/xanmod-archive-keyring.gpg
+  echo 'deb [signed-by=/etc/apt/keyrings/xanmod-archive-keyring.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-release.list
   sudo apt install linux-xanmod-lts -y  # 安装 LTS 内核
   echo "Xanmod LTS 内核已安装。请重启系统以应用更改"
 fi
