@@ -1,0 +1,43 @@
+# frps 高级配置
+
+bindAddr = "0.0.0.0"
+bindPort = 7000
+bindUDPPort = 7001
+kcpBindPort = 7000
+
+# 令牌
+auth.token = "your_token_here"
+
+# 日志
+log.to = "./frps.log"
+log.level = "info"
+log.maxDays = 3
+
+# HTTP
+vhostHTTPPort = 80
+
+# HTTPS
+vhostHTTPSPort = 443
+
+# 管理面板
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "admin"
+webServer.password = "admin"
+
+# 端口范围
+allowPorts = [
+    { start = 2000, end = 50000 }
+]
+
+# 限制
+maxPortsPerClient = 0
+maxPoolCount = 5
+
+# 子域名
+# subDomainHost = "frps.example.com"
+
+# TCP复用
+transport.tcpMux = true
+transport.heartbeatTimeout = 90
+transport.tcpKeepalive = 7200

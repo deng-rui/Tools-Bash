@@ -1,0 +1,24 @@
+# frps 标准配置
+
+bindAddr = "0.0.0.0"
+bindPort = 7000
+
+# 令牌
+auth.token = "your_token_here"
+
+# 日志
+log.to = "./frps.log"
+log.level = "info"
+log.maxDays = 3
+
+# HTTP
+vhostHTTPPort = 80
+
+# HTTPS
+vhostHTTPSPort = 443
+
+# 管理面板
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "admin"
+webServer.password = "admin"

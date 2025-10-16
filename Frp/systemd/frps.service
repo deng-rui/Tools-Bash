@@ -1,0 +1,13 @@
+[Unit]
+Description=frps
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/frp/frps -c /usr/local/frp/frps.toml
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target

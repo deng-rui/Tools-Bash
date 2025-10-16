@@ -1,0 +1,12 @@
+# frps 基础配置
+
+bindAddr = "0.0.0.0"
+bindPort = 7000
+
+# 令牌
+auth.token = "your_token_here"
+
+# 日志
+log.to = "./frps.log"
+log.level = "info"
+log.maxDays = 3

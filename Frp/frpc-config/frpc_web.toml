@@ -1,0 +1,29 @@
+# frpc web配置
+
+# 服务器
+serverAddr = "your_server_ip"
+serverPort = 7000
+
+# 令牌
+auth.token = "your_token_here"
+
+# 日志
+log.to = "./frpc.log"
+log.level = "info"
+log.maxDays = 3
+
+# HTTP
+[[proxies]]
+name = "web"
+type = "http"
+localIP = "127.0.0.1"
+localPort = 80
+customDomains = ["your-domain.com"]
+
+# HTTPS
+[[proxies]]
+name = "web-https"
+type = "https"
+localIP = "127.0.0.1"
+localPort = 443
+customDomains = ["your-domain.com"]

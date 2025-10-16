@@ -1,0 +1,21 @@
+# frpc 基础配置
+
+# 服务器
+serverAddr = "your_server_ip"
+serverPort = 7000
+
+# 令牌
+auth.token = "your_token_here"
+
+# 日志
+log.to = "./frpc.log"
+log.level = "info"
+log.maxDays = 3
+
+# SSH例子
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 6000
