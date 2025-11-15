@@ -50,6 +50,6 @@ if [ $INSTALL_XANMOD -eq 1 ]; then
 fi
 
 echo "执行 SSH 密钥安装脚本..."
-bash <(curl -fsSL https://v6.gh-proxy.com/https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) -o -d -g $USER
+bash <(curl -fsSL https://raw.githubusercontent.com/deng-rui/Tools-Bash/refs/heads/main/SSH-Key-Installer.sh) -o -d -g $USER
 
 echo "脚本执行完成"
